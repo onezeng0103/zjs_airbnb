@@ -1,0 +1,4 @@
+export const HANDLE_TOTAL = "HANDLE_TOTAL";
+export const HANDLE_LIST = "HANDLE_LIST";
+export const HANDLE_PAGE_NUM = "HANDLE_PAGE_NUM";
+export const HANDLE_LOADING = "HANDLE_LOADING";
