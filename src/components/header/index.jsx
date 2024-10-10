@@ -1,5 +1,5 @@
 import { memo } from 'react'
-import { useSelector } from 'react-redux'
+import { useSelector, shallowEqual } from 'react-redux'
 import { useState } from 'react'
 import HeaderLeft from './components/left/index.jsx'
 import HeaderCenter from './components/center/index.jsx'
@@ -31,7 +31,7 @@ const Header = memo(() => {
             fixed: state.main.fixed,
             isLucency: state.main.isLucency,
         }
-    })
+    }, shallowEqual)
     const [current, setCurrent] = useState(0)
     return (
         <HeaderWrapper className={classNames({ fixed })}>
@@ -57,7 +57,7 @@ const Header = memo(() => {
                     <HeaderRight />
                 </div>
                 <div className="search">
-                  <div className="center"></div>
+                    <div className="center"></div>
                 </div>
             </div>
         </HeaderWrapper>
